@@ -56,6 +56,14 @@ public class UCSBCurriculumSearch {
 
        @return HTML code for the page
     */
+
+
+    public ArrayList<UCSBLecture> getLects(){
+	return lectures;
+
+    }
+
+    
     public static String getMainPage() {
 	StringBuffer wholeResponse = null;
 	try {
