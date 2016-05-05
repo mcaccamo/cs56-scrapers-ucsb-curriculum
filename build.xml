@@ -49,10 +49,14 @@
 	
 	<target name="compile" description="compile the code">
 		<mkdir dir="build" />
-		<javac srcdir="src" destdir="build" debug="true" debuglevel="lines,source" includeantruntime="false">
+		<javac fork="true" srcdir="src" destdir="build" debug="true" debuglevel="lines,source" includeantruntime="false">
 			<classpath refid="project.class.path" />
 		</javac>
 	</target>
+
+ <target name="saveLect" depends = "compile,setup" description="test save lect">
+	 <java fork="true" classpathref="project.class.path" classname="edu.ucsb.cs56.projects.scrapers.ucsb_curriculum.saveLect" />
+ </target>
 	
  <target name="gui" depends = "compile,setup" description="run the gui">
 	 <java fork="true" classpathref="project.class.path" classname="${GUI}" />
