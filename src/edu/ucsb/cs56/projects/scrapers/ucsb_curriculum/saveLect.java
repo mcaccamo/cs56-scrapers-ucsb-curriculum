@@ -57,7 +57,7 @@ public class saveLect{
 
 		 */
 		 //THIS PART WORKS 	  
-	    for(int i = 0; i < 3; i++){
+	    for(int i = 0; i < 2; i++){
 		//if (subject.length > -1){
 	      	Courses = new UCSBCurriculumSearch();
 		String input = subject[i];
